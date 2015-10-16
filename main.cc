@@ -6,6 +6,6 @@ using namespace std;
 
 int main()
 {
-	variable v("aa");
+	variable v("22*x^2");
 	return 0;
 }
