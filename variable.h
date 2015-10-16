@@ -11,7 +11,6 @@ public:
 private:
 	int number;
 	std::string *var;
-	std::string* getTokens(std::string , int& );
 };
 
 #endif /* end of include guard: VARIABLE_H_7JG0Q9ZK */
