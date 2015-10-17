@@ -7,14 +7,12 @@ using namespace std;
 
 string* getTokens(string s, int &length, string delimiter){
 	int tokenSize = 1;
-	for (int i = s.find(delimiter, 0); i != std::string::npos; i = s.find(delimiter, i) ) {
+	for (unsigned long i = s.find(delimiter, 0); i != std::string::npos; i = s.find(delimiter, i) ) {
 		tokenSize++;
 		i++;
 	}
-	std::cout << tokenSize << std::endl;
 	string *tokens = new string[tokenSize];
-	int oldPos = -1;
-	int pos;
+	unsigned long pos;
 	int count = 1;
 	while((pos = s.find(delimiter)) != std::string::npos){
 		string token = s.substr(0, pos);
@@ -25,4 +23,13 @@ string* getTokens(string s, int &length, string delimiter){
 	tokens[count - 1] = s;
 	length = tokenSize;
 	return tokens;
+}
+
+
+int isNumber(string input){
+	for (unsigned long i = 0; i < input.size(); ++i) {
+		if( input[i] > '9' or input[i] < '0')
+			return 0;
+	}
+	return 1;
 }

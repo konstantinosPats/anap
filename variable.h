@@ -11,6 +11,7 @@ public:
 private:
 	int number;
 	std::string *var;
+	int *power;
 };
 
 #endif /* end of include guard: VARIABLE_H_7JG0Q9ZK */

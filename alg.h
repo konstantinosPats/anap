@@ -4,5 +4,6 @@
 #include <iostream>
 
 std::string* getTokens(std::string, int&, std::string);
+int isNumber(std::string);
 
 #endif /* end of include guard: ALG_H_VKUI9HMN */
